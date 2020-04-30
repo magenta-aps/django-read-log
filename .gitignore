@@ -5,3 +5,5 @@ __pycache__/
 env/
 *.sqlite3
 build/
+dist/
+django_read_log.egg-info/

@@ -52,7 +52,7 @@ This can be changed by setting the **log_operations** attribute to a string of y
         model = TestModel
 
 Using django-read-log in combination with unsupported views
-___________________________________________
+___________________________________________________________
 Because the view mixin hooks into the **get_context_data** view function it should be possible to add the mixin to
 unsupported views as long as they either implement or inherit the get_context_data function
 (eg. from SingleObjectMixin or MultipleObjectMixin) and define the class attribute **'log_operation'** to the string

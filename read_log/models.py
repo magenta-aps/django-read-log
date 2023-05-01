@@ -3,8 +3,11 @@ from uuid import uuid4
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth import get_user_model
-from django.utils.translation import ugettext as _
 from django.views.generic import DetailView, DeleteView, UpdateView, ListView
+try:
+    from django.utils.translation import ugettext as _  # Django 2.2.0
+except ImportError:
+    from django.utils.translation import gettext as _  # Django >=3.0
 
 operation_choices = (
     ('detail', _('Detail view, directly targeted')),
